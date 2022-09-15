@@ -1,0 +1,24 @@
+# These 3 lines must be the first in htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^$                                                  /myVinyls/view_index.php [NC,L]
+RewriteRule ^index$                                             /myVinyls/view_index.php [NC,L]
+RewriteRule ^login$                                             /myVinyls/view_login.php [NC,L]
+RewriteRule ^signup$                                            /myVinyls/view_signup.php [NC,L]
+RewriteRule ^profile$                                           /myVinyls/view_profile.php [NC,L]
+RewriteRule ^collection$                                        /myVinyls/view_collection.php [NC,L]
+RewriteRule ^add_album$                                         /myVinyls/view_add_album.php [NC,L]
+RewriteRule ^wishlist$                                         /myVinyls/view_wishlist.php [NC,L]
+
+
+
+
+# RewriteRule ^add-album$                                         /myVinyls/view_add-album.php [NC,L]
+# RewriteRule ^album-search$                                      /myVinyls/view_album-search.php [NC,L]
+# RewriteRule ^miss-album$                                        /myVinyls/view_miss-album.php [NC,L]
+
+
+# Catches 404 errors
+ErrorDocument 404                   /myVinyls/view_404.php

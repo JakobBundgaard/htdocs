@@ -1,0 +1,17 @@
+# These 3 lines must be the first in htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^$                                                  /myAlbums/view_index.php [NC,L]
+RewriteRule ^index$                                             /myAlbums/view_index.php [NC,L]
+RewriteRule ^login$                                             /myAlbums/view_login.php [NC,L]
+RewriteRule ^signup$                                            /myAlbums/view_signup.php [NC,L]
+RewriteRule ^about$                                             /myAlbums/view_about.php [NC,L]
+RewriteRule ^add-album$                                         /myAlbums/view_add-album.php [NC,L]
+RewriteRule ^album-search$                                      /myAlbums/view_album-search.php [NC,L]
+RewriteRule ^miss-album$                                        /myAlbums/view_miss-album.php [NC,L]
+
+
+# Catches 404 errors
+ErrorDocument 404                   /myAlbums/view_404.php

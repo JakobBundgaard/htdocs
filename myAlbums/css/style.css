@@ -1,0 +1,237 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+ /*
+* {
+    font-family: Nunito, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+#logo {
+    width: 65px;
+    height: 60px;
+    padding: 0.5rem;
+}
+
+nav {
+    background-color: grey;
+    display: flex;
+    align-items: center;
+}
+
+.nav_links {
+    display: inline;
+    justify-content: space-around;
+    
+    
+} */
+
+body {
+    height: 125vh;
+    margin-top: 80px;
+    padding: 30px;
+    background-size: cover;
+    font-family: Rockwell;
+    background-color: #4072b2;
+    font-size: 1.1rem;
+    }
+    
+header {
+    background-color: rgb(5, 10, 87);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5px;
+    height: 30px;
+    display: inline;
+    align-items: center;
+    
+    box-shadow: 0 0 25px 0 black;
+    }
+
+    
+/* header * {
+    display: inline;
+    }
+    
+header li {
+    margin: 20px;
+    }
+    
+header li a {
+    color: white;
+    text-decoration: none;
+    } */
+
+      
+.wrapper {
+    width: 900px;
+    margin: 0 auto;    
+}
+      
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+    line-height: 24px;        
+ }
+      
+h1 {
+        font-weight: 600;
+        font-size: 32px;
+        padding: 20px 0;
+        text-align: center;
+      }
+      
+h2 {
+        font-weight: 500;
+        font-size: 24px;
+        padding: 20px 0;
+        text-align: center;
+      }
+      
+h3 {
+        font-weight: 500;
+        font-size: 16px;
+      }
+      
+p {
+        font-weight: 400;
+        font-size: 16px;
+      }
+      
+nav {
+        width: 100%;
+        height: 60px;
+        background-color: #0e0456;
+      }
+      
+nav .wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+.logo-div {
+    margin-left: 0px;
+}
+      
+#logo {
+        width: 65px;
+        height: 60px;
+        padding: 0.5rem;
+        
+    }
+    
+     
+      
+nav ul li {
+        list-style: none;
+        float: left;
+      }
+      
+nav ul li a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 16px;
+        text-transform: uppercase;
+      }
+      
+nav ul li a:hover {
+        color: #31a6ff;
+      }
+      
+section {
+        /* background-color: #fff; */
+        background-image: linear-gradient(135deg,#3716de 0%,#0f0442 100%);
+        width: 94%;
+        padding: 20px 3%;
+      }
+      
+      /* index */
+      
+.index-intro p {
+          text-align: center;
+      }
+
+.index-categories {
+    height: 50vh;
+}
+
+.index-categories p {
+  text-align: center;
+}
+
+      
+.index-categories-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+.index-categories-list div {
+        width: 24%;
+        height: 200px;
+        border-radius: 50%;
+        /* background-color: #ccc; */
+        background-image: url('../img/vinyl-2.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+
+.index-categories-list div:hover {
+        width: 24%;
+        height: 200px;
+        border-radius: 50%;
+        /* background-color: #ccc; */
+        background-image: url('../img/vinyl-2.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        transform: scale(1.1);
+        transition: 300ms linear;
+      }
+
+.index-links {
+  text-decoration: none;
+}
+      
+      /* sign up */
+      
+.signup-form-form {
+        display: flex;
+        justify-content: center;
+      }
+      
+.signup-form p {
+        text-align: center;
+        padding-bottom: 40px;
+        color: #007ecc;
+      }
+      
+.signup-form form {
+        width: 30%;
+      }
+      
+.signup-form form input {
+        width: calc(100% - 16px);
+        padding: 6px;
+        margin-bottom: 4px;
+      }
+      
+.signup-form form button {
+        display: block;
+        padding: 10px 20px;
+        margin: 10px auto;
+        cursor: pointer;
+      }
+      
+

@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+}
+
+body {
+    width: 100vm;
+    height: 100vh;
+    background:gray;
+    overflow-y: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100vw;
+    height: 5rem;
+    background-color: rgba(33, 3, 58, 1);
+}
+
+
+.settings-div {
+    padding: 1rem 4.9rem;
+}
+
+#search-welcome {
+    color: #fff;
+    padding-bottom: 1.5rem;
+    font-size: 30px;
+}
+
+select {
+    background: transparent;
+    border: none;
+    outline: none;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+option:after {
+    color: black;
+}
+
+input {
+    height: 4rem;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* color: black; */
+    background: #fff;
+    border: 0px;
+}
+
+#date-container {
+    height: 4rem;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: #fff;
+    border: 0px;
+}
+
+.date-input {
+    background: transparent;
+    /* color: rgba(255, 255, 255, 0.2); */
+}
+
+#input-btn {
+    height: 5rem;
+    width: 5rem;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#de1666 0%,#73146f 100%);
+    /* background: rgba(233, 16, 125, 0.5); */
+    color: #fff;
+    border: 0px;
+    position: relative;
+    bottom: 10%;
+}
+
+#flights-search {
+    width: 100vw;
+    height: 30rem;
+    padding: 2rem 1rem;
+    background-color: rgba(33, 3, 58, 0.5);
+}
+
+.img_city {
+    width: 70px;
+    height: 70px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.from_city_pop {
+    padding-right: 1rem;
+}
+
+.checkbox {
+    padding: 1rem;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#from-results {
+    display: none;
+    width: 120%;
+    height: auto;
+    background: white;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+#to-results {
+    display: none;
+    width: 120%;
+    height: auto;
+    background: white;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.from-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.to-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#main {
+    display: flex;
+    width: 100vw;
+
+}
+
+#left {
+    width: 30%;
+    height: 10rem;
+    background-color: rgba(33, 3, 58, 0.7);
+}
+
+#right {
+    width: 70%;
+    height: 10rem;
+    background-color: rgba(33, 3, 58, 0.3);
+}
+
+footer {
+    width: 100vw;
+    background-color: rgba(19, 0, 38, 1);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 2rem 1rem;    
+}
