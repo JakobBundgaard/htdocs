@@ -3,15 +3,18 @@
 
 // DB params
 define('DB_HOST', 'localhost');
-define('DB_USER', '_YOUR_USER_');
-define('DB_PASS', '_YOUR_PASS_');
-define('DB_NAME', '_YOUR_DBNAME_');
+define('DB_USER', 'jakob');
+define('DB_PASS', 'password');
+define('DB_NAME', 'shareposts');
 
 // App route
 define('APP_ROOT', dirname(dirname(__FILE__)));
 
 // Url route
-define('URL_ROOT', '_YOUR_URL_');
+define('URL_ROOT', 'http://localhost/shareposts');
 
 // Sitename
-define('SITE_NAME', '_YOUR_SITENAME_');
+define('SITE_NAME', 'Shareposts');
+
+// Version
+define('APP_VERSION', '1.0.0');
