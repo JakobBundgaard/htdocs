@@ -9,7 +9,7 @@ class Controller {
         require_once '../app/models/' . $model . '.php';
 
         // Instatiate model
-        return new $model;
+        return new $model();
     }
 
     // View load controller
