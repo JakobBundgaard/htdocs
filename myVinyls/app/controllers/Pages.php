@@ -6,7 +6,7 @@
     
     public function index(){
       if(isLoggedIn()){
-        redirect('posts');
+        // redirect('posts');
       }
 
       $data = [
@@ -24,5 +24,14 @@
       ];
 
       $this->view('pages/about', $data);
+    }
+
+    public function albums(){
+      $data = [
+        'title' => 'Albums',
+        'description' => 'Add or search for albums'
+      ];
+
+      $this->view('pages/add_album', $data);
     }
   }
