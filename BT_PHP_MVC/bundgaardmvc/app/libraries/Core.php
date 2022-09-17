@@ -25,7 +25,7 @@ class Core {
         }
 
         // Require the controller
-        require_once '../app/controllers/'. $this->currentController . '.php';
+        require_once '../app/controllers'. $this->currentController . '.php';
 
         // Instatiate controller class
         $this->currentController = new $this->currentController;
