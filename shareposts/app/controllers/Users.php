@@ -60,7 +60,22 @@ class Users extends Controller{
             // Make sure errors are empty, meaning there are no errors
             if(empty($data['email_err']) && empty($data['name_err'])  && empty($data['password_err']) && empty($data['confirm_password_err'])) {
                 // Validated
-                die('SUCCES');
+                
+                // Hashing password with deafult hashing
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                // Register user
+                if($this->userModel->register($data)) {
+                    // Using flash() from helpers, without $class param, so the default is used
+                    flash('register_success', 'You are now registered and can login');
+                    // Using redirect function from helpers
+                    redirect('users/login');
+                } else {
+                    exit('Something went wrong');
+                }
+                
+
+
             } else {
                 // Load view with errors
                 $this->view('users/register', $data);
@@ -106,12 +121,32 @@ class Users extends Controller{
             // Validate password
             if(empty($data['password'])) {
                 $data['password_err'] = 'Please enter password';
-            } 
+            }
+            
+            // Check for user/email
+            if($this->userModel->findUserByEmail($data['email'])) {
+                // User found
+
+            } else {
+                // Not found
+                $data['email_err'] = 'No user found';
+            }
 
             // Make sure errors are empty, meaning there are no errors
             if(empty($data['email_err']) && empty($data['password_err'])) {
                 // Validated
-                die('SUCCES');
+                // Check and set logged in user
+                $loggedInUser = $this->userModel->login($data['email'], $data['password']);
+
+                if($loggedInUser) { 
+                    // Create session variables
+                    $this->createUserSession($loggedInUser);
+                }else {
+                    $data['password_err'] = 'Password incorrect';
+
+                    $this->view('users/login', $data);
+                }
+
             } else {
                 // Load view with errors
                 $this->view('users/login', $data);
@@ -127,6 +162,32 @@ class Users extends Controller{
             ];
             // Load view
             $this->view('users/login', $data);
+        }
+    }
+
+    // Creating session and setting session variables
+    public function createUserSession($user) {
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_email'] = $user->email;
+        $_SESSION['user_name'] = $user->name;
+        redirect('pages/index');
+    }
+    // Loggin out
+    public function logout() {
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_email']);
+        unset($_SESSION['user_name']);
+
+        session_destroy();
+        redirect('users/login');
+    }
+
+    // Check if user is logged in or not. Used to limit access for users that is not logged in
+    public function isLoggenIn() {
+        if(isset($_SESSION['user_id'])) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
