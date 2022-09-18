@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+    
+    background-image: linear-gradient(rgb(46, 52, 216), rgb(11, 16, 151));
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.navbar {
+    background: black;
+}
+
+#index_jumbo {
+    margin-top: 100px;
+    color: white;
+    background: url('../img/vinyl-2.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}

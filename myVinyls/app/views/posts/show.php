@@ -12,7 +12,9 @@
   <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn-dark">Edit</a>
 
   <form class="pull-right" action="<?php echo URLROOT; ?>/posts/delete/<?php echo $data['post']->id; ?>" method="post">
-    <input type="submit" value="Delete" class="btn btn-danger">
+      <button type="submit" class="btn btn-danger">
+          <i class="fa fa-trash"></i> Delete
+      </button>
   </form>
 <?php endif; ?>
 
