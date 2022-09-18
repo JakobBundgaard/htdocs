@@ -1,6 +1,4 @@
-<?php 
-require APP_ROOT . '/views/includes/header.php';
-?>
+<?php require APP_ROOT . '/views/includes/header.php'; ?>
 
     <div class="row">
         <div class="col-md-6 mx-auto">
@@ -37,6 +35,4 @@ require APP_ROOT . '/views/includes/header.php';
     </div>
 
 
-<?php 
-require APP_ROOT . '/views/includes/footer.php';
-?>
+<?php require APP_ROOT . '/views/includes/footer.php'; ?>

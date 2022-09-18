@@ -170,7 +170,7 @@ class Users extends Controller{
         $_SESSION['user_id'] = $user->id;
         $_SESSION['user_email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
-        redirect('pages/index');
+        redirect('posts');
     }
     // Loggin out
     public function logout() {
@@ -180,14 +180,5 @@ class Users extends Controller{
 
         session_destroy();
         redirect('users/login');
-    }
-
-    // Check if user is logged in or not. Used to limit access for users that is not logged in
-    public function isLoggenIn() {
-        if(isset($_SESSION['user_id'])) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }

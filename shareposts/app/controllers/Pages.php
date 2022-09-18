@@ -6,7 +6,10 @@ class Pages extends Controller{
     }
 
     public function index() {
-
+        // redirecting Home link to posts if logged in
+        if(isLoggenIn()) {
+            redirect('posts');
+        }
 
         $data = [
             'title' => 'SharePosts',

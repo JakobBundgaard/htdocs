@@ -28,3 +28,12 @@ function flash($name = '', $message = '', $class = 'alert alert-success') {
     }
 }
 
+// Check if user is logged in or not. Used to limit access for users that is not logged in
+function isLoggenIn() {
+    if(isset($_SESSION['user_id'])) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
