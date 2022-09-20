@@ -19,6 +19,7 @@
 
                 <h3 class="card-title"><?php echo $album->artist ?></h3>
                 <h4 class="card-title"><?php echo $album->title ?></h4>
+                <p class="card-text">Genre: <?php echo $album->genre ?></p>
                 <p class="card-text">Released: <?php echo $album->released ?></p>
                 <p class="card-text">Tracks: <?php echo $album->tracks ?></p>
                 <a href="<?php echo URLROOT; ?>/albums/show_album/<?php echo $album->albumId; ?>" class="btn btn-block btn-dark">More</a>

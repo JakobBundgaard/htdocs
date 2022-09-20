@@ -1,8 +1,9 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
   
-    
+      <a href="<?php echo URLROOT; ?>/albums" class="btn btn-dark"><i class="fa fa-backward"></i> Back</a>     
+
       <div class="card card-body bg-light mt-5">
-        <h2>Add Album</h2>
+        <h2>Add New Album</h2>
         <p>Start adding to your record collection</p>
         <form action="<?php echo URLROOT; ?>/albums/add" method="post">
 
@@ -14,15 +15,31 @@
                         </button>
 
         <div class="form-group">
-            <label for="email">Email: <sup>*</sup></label>
-            <input type="email" name="email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['email']; ?>">
-            <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
+            <label for="artist">Artist: <sup>*</sup></label>
+            <input type="text" name="artist" class="form-control form-control-lg <?php echo (!empty($data['artist_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['artist']; ?>">
+            <span class="invalid-feedback"><?php echo $data['artist_err']; ?></span>
           </div>
           <div class="form-group">
-            <label for="password">Password: <sup>*</sup></label>
-            <input type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
-            <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
+            <label for="title">Title: <sup>*</sup></label>
+            <input type="text" name="title" class="form-control form-control-lg <?php echo (!empty($data['title_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['title']; ?>">
+            <span class="invalid-feedback"><?php echo $data['title_err']; ?></span>
           </div>
+          <div class="form-group">
+            <label for="released">Released: <sup>*</sup></label>
+            <input type="text" name="released" class="form-control form-control-lg <?php echo (!empty($data['released_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['released']; ?>">
+            <span class="invalid-feedback"><?php echo $data['released_err']; ?></span>
+          </div>
+          <div class="form-group">
+            <label for="genre">Genre: <sup>*</sup></label>
+            <input type="text" name="title" class="form-control form-control-lg <?php echo (!empty($data['genre_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['genre']; ?>">
+            <span class="invalid-feedback"><?php echo $data['genre_err']; ?></span>
+          </div>
+          <div class="form-group">
+            <label for="tracks">Tracks: <sup>*</sup></label>
+            <textarea name="tracks" class="form-control form-control-lg <?php echo (!empty($data['tracks_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['tracks']; ?></textarea>
+            <span class="invalid-feedback"><?php echo $data['tracks_err']; ?></span>
+          </div>
+          <input type="submit" class="btn btn-success" value="Submit">
         </form>
       </div>
     

@@ -21,7 +21,7 @@ class Albums extends Controller {
         $this->view('albums/index', $data);
     }
 
-    public function addAlbum() {
+    public function add() {
         $data = [
             'artist' => '',
             'title' => '',
