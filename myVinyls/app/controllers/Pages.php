@@ -26,12 +26,12 @@
       $this->view('pages/about', $data);
     }
 
-    public function albums(){
-      $data = [
-        'title' => 'Albums',
-        'description' => 'Add or search for albums'
-      ];
+    // public function albums(){
+    //   $data = [
+    //     'title' => 'Albums',
+    //     'description' => 'Add or search for albums'
+    //   ];
 
-      $this->view('pages/add_album', $data);
-    }
+    //   $this->view('pages/add_album', $data);
+    // }
   }

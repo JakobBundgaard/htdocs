@@ -19,10 +19,10 @@
               <a class="nav-link" style="color: white;" href="#">Welcome <?php echo $_SESSION['user_name']; ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index">Home</a>
+            <a class="nav-link" href="<?php echo URLROOT; ?>/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/add_album">Albums</a>
+            <a class="nav-link" href="<?php echo URLROOT; ?>/albums">Albums</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT; ?>/posts">Posts</a>

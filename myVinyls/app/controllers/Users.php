@@ -39,6 +39,10 @@
           $data['name_err'] = 'Pleae enter name';
         }
 
+        if(strlen($data['name']) < 2 || strlen($data['name']) > 20) {
+          $data['name_err'] = 'Name must be between 2 and 20 characters';
+        }
+
         // Validate Password
         if(empty($data['password'])){
           $data['password_err'] = 'Pleae enter password';

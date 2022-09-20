@@ -3,7 +3,7 @@
   define('DB_HOST', 'localhost');
   define('DB_USER', 'jakob');
   define('DB_PASS', 'password');
-  define('DB_NAME', 'shareposts');
+  define('DB_NAME', 'album_db');
 
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
