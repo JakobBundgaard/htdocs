@@ -41,4 +41,13 @@
         </ul>
       </div>
     </div>
+
+    <!-- <form class="navbar-form navbar-right" method="get" action="" id="language-form">
+    <div class="form-group">
+      <select name="lang" class="form-control" onchange="changeLang()">
+        <option value="en"<?php //if(isset($_SESSION['lang']) && $_SESSION['lang'] == 'en') { echo "selected"; } ?>>English</option>
+        <option value="dk"<?php //if(isset($_SESSION['lang']) && $_SESSION['lang'] == 'dk') { echo "selected"; } ?>>Dansk</option>
+      </select>
+    </div>
+  </form> -->
   </nav>

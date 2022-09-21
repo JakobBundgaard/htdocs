@@ -1,8 +1,37 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/header.php'; 
+//       require APPROOT . '/views/inc/language/lang_en.php';
+//       require APPROOT . '/views/inc/language/lang_dk.php';
+      
+
+// // Setting language language variables
+// if(isset($_GET['lang']) && !empty($_GET['lang'])) {
+//   $_SESSION['lang'] = $_GET['lang'];
+
+//   if(isset($_SESSION['lang']) && $_SESSION['lang'] != $_GET['lang']) {
+//     echo "<script type='text/javascript'>location.reload(); </script>";
+//   }
+// }
+
+//   if(isset($_SESSION['lang'])) {
+//     // include "inc/language/" . $_SESSION['lang']. ".php";
+//   } else {
+//     include "inc/language/lang_en.php";
+//   }
+
+
+?>
+
+
+
+
+ 
+ 
+
+  <div class="container">
   <div class="row">
     <div class="col-md-6 mx-auto">
       <div class="card card-body bg-light mt-5">
-        <h2>Create An Account</h2>
+        <h2>Register Here</h2>
         <p>Please fill out this form to register with us</p>
         <form action="<?php echo URLROOT; ?>/users/register" method="post">
           <div class="form-group">
@@ -38,4 +67,10 @@
       </div>
     </div>
   </div>
+  </div>
+
+  
+
+
+  
 <?php require APPROOT . '/views/inc/footer.php'; ?>

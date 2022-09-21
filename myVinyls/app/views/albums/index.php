@@ -15,7 +15,7 @@
     <form class="search-form">
             <div id="artist-container">
                 <input class="search-input" id="artist-input" type="text" placeholder="Search by artist">
-                <!-- oninput="show_from_results()"> -->
+                <!-- oninput="show_artist_results()"> -->
                 <!-- onblur="hide_from_results()" -->  
             </div>
             <div id="title-container">
@@ -55,8 +55,8 @@
                 <img class="card-img-top" src=" <?php $album->image ?>" alt="Album img">
                 
 
-                <h3 class="card-title mb-2"><?php echo $album->artist ?></h3>
-                <h5 class="card-subtitle mb-2"><?php echo $album->title ?></h5>
+                <h3 class="card-title mb-2">Artist: <?php echo $album->artist ?></h3>
+                <h5 class="card-subtitle mb-2">Title: <?php echo $album->title ?></h5>
                 <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
                 <p class="card-text mb-1">Released: <?php echo $album->released ?></p>
                 <p class="card-text">Tracks: <?php echo $album->tracks ?></p>
