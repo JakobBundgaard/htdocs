@@ -19,7 +19,23 @@ body {
     background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.my-card {
-    /* background: url('../img/vinyl-2.png'); */
-    
+.search-form {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    height: 4rem;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* color: black; */
+    background: #fff;
+    border: 0px;
+}
+
+#input-btn {
+    margin-top: 0.7rem;
 }

@@ -10,6 +10,44 @@
             </a>
         </div>
     </div>
+
+    <div class="album-search">
+    <form class="search-form">
+            <div id="artist-container">
+                <input class="search-input" id="artist-input" type="text" placeholder="Search by artist">
+                <!-- oninput="show_from_results()"> -->
+                <!-- onblur="hide_from_results()" -->  
+            </div>
+            <div id="title-container">
+                <input class="search-input" id="title-input" type="text" placeholder="Search by title">
+                <!-- oninput="show_to_results()"> -->
+                <!-- onblur="hide_to_results()"  -->  
+            </div>
+            <div id="release-container">
+                <input class="search-input" id="release-input" type="text" placeholder="Search by release year">
+                <!-- oninput="show_to_results()"> -->
+                <!-- onblur="hide_to_results()"  -->  
+            </div>
+            <div id="genre-container">
+                <input class="search-input" id="genre-input" type="text" placeholder="Search by genre">
+                <!-- oninput="show_to_results()"> -->
+                <!-- onblur="hide_to_results()"  -->  
+            </div>
+            <div class="result">
+
+            </div>
+            <!-- <div>
+                <button id="input-btn">Search albums</button>
+            </div> -->
+            <div>
+            <button class="btn btn-dark" id="input-btn">
+                <i class="fa fa-search"></i> Search Albums
+            </button>
+        </div>
+        </form>
+    </div>
+
+
     <?php foreach($data['albums'] as $album) : ?>
         <div class="card card-body mb-3">
             
