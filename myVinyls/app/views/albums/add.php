@@ -5,16 +5,17 @@
       <div class="card card-body bg-light mt-5">
         <h2>Add New Album</h2>
         <p>Start adding to your record collection</p>
-        <form action="<?php echo URLROOT; ?>/albums/add" method="post">
+        <form action="<?php echo URLROOT; ?>/albums/add" method="post" enctype="multipart/form-data">
 
-        <img class="card-img-top" src="/public/img/death-atlas.png" height="185px" width="185px"
-                            alt="Artist image">
-                        <p></p>
-                        <button type="button" class="btn btn-secondary" onclick="importData()">Vælg
-                            billede
-                        </button>
-
-        <div class="form-group">
+                        
+          <div class="form-group">
+            <input name="image" type="file" class="card-img-top" value="<?php echo $data['image']; ?>" onclick="importData()">
+                            
+            <span class="invalid-feedback"><?php echo $data['image_err']; ?></span>
+                        <!-- <input type="submit" class="btn btn-secondary" value="Vælg billede" onclick="importData()"> -->
+            
+          </div>
+          <div class="form-group">
             <label for="artist">Artist: <sup>*</sup></label>
             <input type="text" name="artist" class="form-control form-control-lg <?php echo (!empty($data['artist_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['artist']; ?>">
             <span class="invalid-feedback"><?php echo $data['artist_err']; ?></span>
@@ -31,11 +32,11 @@
           </div>
           <div class="form-group">
             <label for="genre">Genre: <sup>*</sup></label>
-            <input type="text" name="title" class="form-control form-control-lg <?php echo (!empty($data['genre_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['genre']; ?>">
+            <input type="text" name="genre" class="form-control form-control-lg <?php echo (!empty($data['genre_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['genre']; ?>">
             <span class="invalid-feedback"><?php echo $data['genre_err']; ?></span>
           </div>
           <div class="form-group">
-            <label for="tracks">Tracks: <sup>*</sup></label>
+            <label for="tracks">Tracks:</label>
             <textarea name="tracks" class="form-control form-control-lg <?php echo (!empty($data['tracks_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['tracks']; ?></textarea>
             <span class="invalid-feedback"><?php echo $data['tracks_err']; ?></span>
           </div>

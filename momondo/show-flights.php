@@ -29,7 +29,7 @@ try {
 </head>
 <body>
 <nav>
-
+            <button>
             <?php
                 if($language == 'en')
                 {
@@ -47,6 +47,8 @@ try {
                 <?php  
                 }
             ?>
+            </button>
+            
         
 
     </nav>

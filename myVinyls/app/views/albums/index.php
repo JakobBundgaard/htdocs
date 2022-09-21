@@ -17,10 +17,10 @@
                 <img class="card-img-top" src=" <?php $album->image ?>" alt="Album img">
                 
 
-                <h3 class="card-title"><?php echo $album->artist ?></h3>
-                <h4 class="card-title"><?php echo $album->title ?></h4>
-                <p class="card-text">Genre: <?php echo $album->genre ?></p>
-                <p class="card-text">Released: <?php echo $album->released ?></p>
+                <h3 class="card-title mb-2"><?php echo $album->artist ?></h3>
+                <h5 class="card-subtitle mb-2"><?php echo $album->title ?></h5>
+                <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
+                <p class="card-text mb-1">Released: <?php echo $album->released ?></p>
                 <p class="card-text">Tracks: <?php echo $album->tracks ?></p>
                 <a href="<?php echo URLROOT; ?>/albums/show_album/<?php echo $album->albumId; ?>" class="btn btn-block btn-dark">More</a>
             </div>
