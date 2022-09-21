@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-  
+    <?php flash('album_message') ?>
     <div class="row mb-3">
         <div class="col-md-6">
             <h1>Your Album Collection</h1>
@@ -22,7 +22,7 @@
                 <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
                 <p class="card-text mb-1">Released: <?php echo $album->released ?></p>
                 <p class="card-text">Tracks: <?php echo $album->tracks ?></p>
-                <a href="<?php echo URLROOT; ?>/albums/show_album/<?php echo $album->albumId; ?>" class="btn btn-block btn-dark">More</a>
+                <a href="<?php echo URLROOT; ?>/albums/show/<?php echo $album->albumId; ?>" class="btn btn-lg btn-dark">More</a>
             </div>
 
         </div>
