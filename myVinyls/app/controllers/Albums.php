@@ -160,7 +160,7 @@ class Albums extends Controller {
                 'released' => $album->released,
                 'genre' => $album->genre,
                 'tracks' => $album->tracks,
-                'image' => $album->image
+                'image_id' => $album->image_id
             ];
     
             $this->view('albums/edit', $data);

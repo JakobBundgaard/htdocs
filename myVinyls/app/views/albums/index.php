@@ -40,7 +40,7 @@
                 <button id="input-btn">Search albums</button>
             </div> -->
             <div>
-            <button class="btn btn-dark" id="input-btn">
+            <button class="btn btn-dark btn-block" id="input-btn">
                 <i class="fa fa-search"></i> Search Albums
             </button>
         </div>
@@ -52,15 +52,15 @@
         <div class="card card-body mb-3">
             
             <div class="bg-light p-2 mg-3">
-                <img class="card-img-top" src=" <?php $album->image ?>" alt="Album img">
+                <img class="card-img-top" src=" <?php $album->image_id ?>" alt="Album img">
                 
 
-                <h3 class="card-title mb-2">Artist: <?php echo $album->artist ?></h3>
-                <h5 class="card-subtitle mb-2">Title: <?php echo $album->title ?></h5>
+                <h3 class="card-title mb-2"> <?php echo $album->artist ?></h3>
+                <h5 class="card-subtitle mb-2"> <?php echo $album->title ?></h5>
                 <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
                 <p class="card-text mb-1">Released: <?php echo $album->released ?></p>
                 <p class="card-text">Tracks: <?php echo $album->tracks ?></p>
-                <a href="<?php echo URLROOT; ?>/albums/show/<?php echo $album->albumId; ?>" class="btn btn-lg btn-dark">More</a>
+                <a href="<?php echo URLROOT; ?>/albums/show/<?php echo $album->albumId; ?>" class="btn btn-dark btn-block">More</a>
             </div>
 
         </div>

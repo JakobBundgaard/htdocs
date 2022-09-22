@@ -25,7 +25,7 @@ class Album {
     }
 
     public function addAlbum($data) {
-        $this->db->query('INSERT INTO albums (artist, title, user_id, released, genre, tracks, image) VALUES(:artist, :title, :user_id, :released, :genre, :tracks, :image)');
+        $this->db->query('INSERT INTO albums (artist, title, user_id, released, genre, tracks, image_id) VALUES(:artist, :title, :user_id, :released, :genre, :tracks, :image_id)');
         // Bind values
         $this->db->bind(':artist', $data['artist']);
         $this->db->bind(':title', $data['title']);
@@ -33,7 +33,7 @@ class Album {
         $this->db->bind(':released', $data['released']);
         $this->db->bind(':genre', $data['genre']);
         $this->db->bind(':tracks', $data['tracks']);
-        $this->db->bind(':image', $data['image']);
+        $this->db->bind(':image_id', $data['image_id']);
 
         // Execute
         if($this->db->execute()){
@@ -44,7 +44,7 @@ class Album {
     }
 
     public function updateAlbum($data) {
-        $this->db->query('UPDATE albums SET artist = :artist, title = :title, released = :released, genre = :genre, tracks = :tracks, image = :image WHERE id = :id');
+        $this->db->query('UPDATE albums SET artist = :artist, title = :title, released = :released, genre = :genre, tracks = :tracks, image_id = :image_id WHERE id = :id');
         // Bind values
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':artist', $data['artist']);
@@ -52,7 +52,7 @@ class Album {
         $this->db->bind(':released', $data['released']);
         $this->db->bind(':genre', $data['genre']);
         $this->db->bind(':tracks', $data['tracks']);
-        $this->db->bind(':image', $data['image']);
+        $this->db->bind(':image_id', $data['image_id']);
 
         // Execute
         if($this->db->execute()){

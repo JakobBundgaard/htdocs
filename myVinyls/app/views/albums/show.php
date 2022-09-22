@@ -14,7 +14,7 @@
     <div class="card card-body mb-3">
             
             <div class="bg-light p-2 mg-3">
-                <img class="card-img-top" src=" <?php $data['album'] ->image ?>" alt="Album img">
+                <img class="card-img-top" src=" <?php $data['album']->image_id ?>" alt="Album img">
                 
 
                 <h3 class="card-title mb-2"><?php echo $data['album'] ->artist ?></h3>
@@ -26,12 +26,12 @@
 
             <?php if($data['album']->user_id == $_SESSION['user_id']) : ?>
                 <hr>
-                <a href="<?php echo URLROOT; ?>/albums/edit/<?php echo $data['album']->id; ?>" class="btn-sm btn-dark mb-2">Edit</a>
                 <form class="pull-right" action="<?php echo URLROOT; ?>/albums/delete/<?php echo $data['album']->id; ?>" method="post">
-                <button type="submit" class="btn btn-danger">
-                    <i class="fa fa-trash"></i> Delete
-                </button>
-            </form>
+                    <a href="<?php echo URLROOT; ?>/albums/edit/<?php echo $data['album']->id; ?>" class="btn btn-dark">Edit</a>
+                    <button type="submit" class="btn btn-danger pull-right">
+                        <i class="fa fa-trash"></i> Delete
+                    </button>
+                </form>
             <?php endif; ?>
 
         </div>
@@ -40,6 +40,6 @@
 
     
 
-    <!-- <p><?php echo $data ?></p> -->
+    <!-- <p><?php //echo $data ?></p> -->
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
