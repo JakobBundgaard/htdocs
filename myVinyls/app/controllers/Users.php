@@ -4,6 +4,26 @@
       $this->userModel = $this->model('User');
     }
 
+    // Needed for language
+    public function index(){
+      // if(isLoggedIn()){
+      //   // redirect('posts');
+      // }
+
+      $data =[
+        'name' => '',
+        'email' => '',
+        'password' => '',
+        'confirm_password' => '',
+        'name_err' => '',
+        'email_err' => '',
+        'password_err' => '',
+        'confirm_password_err' => ''
+      ];
+     
+      $this->view('users/register', $data); //
+    }
+
     public function register(){
       // Check for POST
       if($_SERVER['REQUEST_METHOD'] == 'POST'){

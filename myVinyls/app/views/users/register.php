@@ -5,12 +5,6 @@ require APPROOT . '/views/inc/languages/lang_config.php';
 
 ?>
 
-
-
-
- 
- 
-
   <div class="container">
   <div class="row">
     <div class="col-md-6 mx-auto">

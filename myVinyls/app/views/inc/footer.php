@@ -1,9 +1,9 @@
   </div>
 
   <div class="footer_lang bg-dark mt-5">
-        <!-- <a href="register.php?lang=en"><?php echo $lang['lang_en']; ?></a> |
-        <a href="register.php?lang=dk"><?php echo $lang['lang_dk']; ?></a> -->
-        English | Danish
+        <a href="<?php echo URLROOT; ?>/users/register.php?lang=en"><?php echo $lang['lang_en']; ?></a> |
+        <a href="<?php echo URLROOT; ?>/users/register.php?lang=dk"><?php echo $lang['lang_dk']; ?></a>
+        <!-- English | Danish -->
   </div>
   
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
