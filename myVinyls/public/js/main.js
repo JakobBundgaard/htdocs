@@ -1,8 +1,8 @@
 // Languages
-function changeLang() {
-    console.log('From lang selector');
-    document.getElementById('language-form').submit();
-}
+// function changeLang() {
+//     console.log('From lang selector');
+//     document.getElementById('language-form').submit();
+// }
 
 // Images
 function importData() {

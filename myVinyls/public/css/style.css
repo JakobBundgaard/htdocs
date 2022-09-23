@@ -39,3 +39,12 @@ body {
 #input-btn {
     margin-top: 0.7rem;
 }
+
+.footer_lang {
+    width: 100%;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: white;
+}
