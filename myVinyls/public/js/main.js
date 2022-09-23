@@ -1,6 +1,6 @@
 // Languages
 function changeLang() {
-    console.log('From lang selecter');
+    console.log('From lang selector');
     document.getElementById('language-form').submit();
 }
 

@@ -1,9 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; 
-//       require APPROOT . '/views/inc/language/lang_en.php';
-//       require APPROOT . '/views/inc/language/lang_dk.php';
-      
+           
 
-// // Setting language language variables
+// Setting language language variables
 // if(isset($_GET['lang']) && !empty($_GET['lang'])) {
 //   $_SESSION['lang'] = $_GET['lang'];
 
@@ -13,9 +11,9 @@
 // }
 
 //   if(isset($_SESSION['lang'])) {
-//     // include "inc/language/" . $_SESSION['lang']. ".php";
+//      include "/views/inc/language/lang_" . $_SESSION['lang']. ".php";
 //   } else {
-//     include "inc/language/lang_en.php";
+//     include "/views/inc/language/lang_dk.php";
 //   }
 
 
