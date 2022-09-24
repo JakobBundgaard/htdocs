@@ -49,21 +49,25 @@
 
 
     <?php foreach($data['albums'] as $album) : ?>
-        <div class="card card-body mb-3">
+        <div class="card card-body mb-1">
             
-            <div class="bg-light p-2 mg-3">
+            <div class="bg-light mg-3">
                 <!-- <img src="<?=$album->image_id->image['image']?>"
 		            title="<?=$album->image_id->image['name'] ?>"
 		            width='200' height='200'> -->
-                <!-- <img class="card-img-top" src=" <?php $album->image_id ?>" alt="Album img"> -->
+                <img class="card-img-top album_img" src="<?php echo $album->image ?>" alt="Album img">
                 
+                <div class="card-info">
+                    <h3 class="card-title mb-2"> <?php echo $album->artist ?></h3>
+                    <h5 class="card-subtitle mb-2"> <?php echo $album->title ?></h5>
+                    <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
+                    <p class="card-text mb-1">Released: <?php echo $album->released ?></p>
+                    <!-- <p class="card-text">Tracks: <?php echo $album->tracks ?></p> -->
+                </div>
 
-                <h3 class="card-title mb-2"> <?php echo $album->artist ?></h3>
-                <h5 class="card-subtitle mb-2"> <?php echo $album->title ?></h5>
-                <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
-                <p class="card-text mb-1">Released: <?php echo $album->released ?></p>
-                <p class="card-text">Tracks: <?php echo $album->tracks ?></p>
-                <a href="<?php echo URLROOT; ?>/albums/show/<?php echo $album->albumId; ?>" class="btn btn-dark btn-block">More</a>
+                <div class="card-link">
+                    <a href="<?php echo URLROOT; ?>/albums/show/<?php echo $album->albumId; ?>" class="btn btn-dark btn-block">More</a>
+                </div>
             </div>
 
         </div>

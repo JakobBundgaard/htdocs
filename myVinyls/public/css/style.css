@@ -41,10 +41,32 @@ body {
 }
 
 .footer_lang {
+    background: black;
     width: 100%;
     left: 0;
     position: fixed;
     bottom: 0;
     text-align: center;
     color: white;
+}
+
+/* Cards */
+.card-body {
+    padding: 5px;
+}
+
+.album_img {
+    height: 150px;
+    width: 150px;
+}
+
+.card-info {
+    width: 60%;
+    float: right;
+}
+
+.card-link {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    vertical-align: bottom;
 }

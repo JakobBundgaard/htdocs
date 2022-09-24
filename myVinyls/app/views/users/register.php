@@ -46,9 +46,5 @@ require APPROOT . '/views/inc/languages/lang_config.php';
     </div>
   </div>
   </div>
-
-  
-
-
   
 <?php require APPROOT . '/views/inc/footer.php'; ?>

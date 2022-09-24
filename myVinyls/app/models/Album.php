@@ -8,17 +8,20 @@ class Album {
         $this->db = new Database;
     }
 
-    public function getAlbums() {
-        $this->db->query('SELECT *,
-                            albums.id as albumId,
-                            users.id as userId
-                            FROM albums
-                            INNER JOIN users
-                            ON albums.user_id = users.id 
-                            WHERE albums.user_id = users.id
-                            ORDER BY artist ASC                            
-                            ');
-
+    public function getAlbumsByUserId($user_id) {
+        $sql = "SELECT *,
+                        albums.id as albumId,
+                        users.id as userId
+                        FROM albums
+                        INNER JOIN users
+                        ON albums.user_id = users.id 
+                        LEFT JOIN images
+                        ON albums.image_id = images.id 
+                        WHERE albums.user_id = $user_id
+                        
+                        ORDER BY artist ASC                            
+                        ";
+        $this->db->query($sql);
         $results = $this->db->resultSet();
 
         return $results;
@@ -57,6 +60,20 @@ class Album {
         // Execute
         if($this->db->execute()){
             return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function addImage($data) {
+        $this->db->query("INSERT INTO images (name, image) VALUES(:name, :image)");
+        // Bind values
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':image', $data['image']);
+
+        // Execute
+        if($this->db->execute()){
+            return $this->db->lastInsertId();
         } else {
             return false;
         }

@@ -9,6 +9,14 @@
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
   define('URLROOT', 'http://localhost/myVinyls');
+  
+  define('UPLOADPATH', 'C:\\xampp\\htdocs\\myVinyls\\');
+
+  // Current url
+  $a = explode('?', $_SERVER['REQUEST_URI']);
+  define('CURRENTURL', $a[0]);
+
+  
   // Site Name
   define('SITENAME', 'myVinyls');
   // App Version

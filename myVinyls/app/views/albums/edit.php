@@ -5,14 +5,17 @@
       <div class="card card-body bg-light mt-5">
         <h2>Edit Album</h2>
         
+      
+        <!-- <input name="image" type="file" class="card-img-top" value="<?php echo 'image'; ?>"> -->
+        
         <form action="<?php echo URLROOT; ?>/albums/edit/<?php echo $data['id']; ?>" method="post" enctype="multipart/form-data">
-
-                        
+                     
+        
           <div class="form-group">
-            <input name="image" type="file" class="card-img-top" value="<?php echo 'image'; ?>">
+            <input type='file' name='files' />
             <span class="invalid-feedback"><?php echo $data['image_err']; ?></span>
                          <!-- <input type="submit" class="btn btn-secondary" value="Vælg billede" onclick="importData()">  -->
-            
+            <input type="text" name="image_id" value="<?php echo $data['image_id']; ?>">
           </div>
           <div class="form-group">
             <label for="artist">Artist: <sup>*</sup></label>

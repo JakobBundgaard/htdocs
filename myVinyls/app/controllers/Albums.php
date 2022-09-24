@@ -12,8 +12,9 @@ class Albums extends Controller {
     }
 
     public function index() {
+
         // Get Albums
-        $albums = $this->albumModel->getAlbums();
+        $albums = $this->albumModel->getAlbumsByUserId($_SESSION['user_id']);
 
         $data = [
             'albums' => $albums
@@ -91,8 +92,49 @@ class Albums extends Controller {
     }
 
     public function edit($id) {
+        
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
+            
+             if($_FILES['files']['name'] != "") {
+                 
+                 // File name
+                $filename = $_FILES['files']['name'];
+        
+                // Location
+                $target_file = UPLOADPATH . '/public/uploads/'.$filename;
+                $newTarget_File =  './public/uploads/'.$filename;
+        
+                // file extension
+                $file_extension = pathinfo(
+                $target_file, PATHINFO_EXTENSION);
+                
+                $file_extension = strtolower($file_extension);
+        
+                // Valid image extension
+                $valid_extension = array("png","jpeg","jpg");
+        
+                    if(in_array($file_extension, $valid_extension)) {
+            
+                        // Upload file
+                        if(move_uploaded_file(
+                            $_FILES['files']['tmp_name'],
+                            $target_file)
+                        ) {
+            
+                            // Execute query
+                            $sql = "INSERT INTO images (name, image) VALUES(:name, :image)";
+                            $data = [
+                                "name" => trim($filename),
+                                "image" => trim($newTarget_File)
+                            ];
 
+                            $newImage_id = $this->albumModel->addImage($data);
+                            
+                    }
+                }
+             }
+             
+            
             // Sanitize
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -103,7 +145,7 @@ class Albums extends Controller {
                 'released' => trim($_POST['released']),
                 'genre' => trim($_POST['genre']),
                 'tracks' => trim($_POST['tracks']),
-                'image' => trim($_POST['image']),
+                'image_id' => trim(isset($newImage_id)?$newImage_id:$_POST['image_id']),
                 'user_id' => $_SESSION['user_id'],
                 'artist_err' => '',
                 'title_err' => '',

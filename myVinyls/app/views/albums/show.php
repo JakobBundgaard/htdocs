@@ -14,8 +14,8 @@
     <div class="card card-body mb-3">
             
             <div class="bg-light p-2 mg-3">
-                <img class="card-img-top" src=" <?php $data['album']->image_id ?>" alt="Album img">
-                
+                <img class="card-img-top" src=" <?php $data['album']->image ?>" alt="Album img">
+                <!-- <img class="card-img-top album_img" src="<?php echo $album->image ?>" alt="Album img"> -->
 
                 <h3 class="card-title mb-2"><?php echo $data['album'] ->artist ?></h3>
                 <h5 class="card-subtitle mb-2"><?php echo $data['album'] ->title ?></h5>
