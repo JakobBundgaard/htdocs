@@ -52,17 +52,21 @@ body {
 
 /* Cards */
 .card-body {
+    width: 58vw;
     padding: 5px;
+    /* min-height: 100px; */
 }
 
 .album_img {
     height: 150px;
     width: 150px;
+    border-radius: 4%;
 }
 
 .card-info {
     width: 60%;
     float: right;
+    text-align: left;
 }
 
 .card-link {
@@ -70,3 +74,4 @@ body {
     margin-bottom: 2px;
     vertical-align: bottom;
 }
+

@@ -35,7 +35,7 @@ class Albums extends Controller {
                 'released' => trim($_POST['released']),
                 'genre' => trim($_POST['genre']),
                 'tracks' => trim($_POST['tracks']),
-                'image' => trim($_POST['image']),
+                // 'image' => trim($_POST['image']),
                 'user_id' => $_SESSION['user_id'],
                 'artist_err' => '',
                 'title_err' => '',

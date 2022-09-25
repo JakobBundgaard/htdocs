@@ -9,9 +9,9 @@
 
                         
           <div class="form-group">
-            <!-- <input name="image" type="file" class="card-img-top" value="<?php echo $data['image']; ?>">
+            <!-- <input name="image" type="file" class="card-img-top" value="<?php //echo $data['image']; ?>">
                             
-            <span class="invalid-feedback"><?php echo $data['image_err']; ?></span> -->
+            <span class="invalid-feedback"><?php //echo $data['image_err']; ?></span> -->
                         <!-- <input type="submit" class="btn btn-secondary" value="Vælg billede" onclick="importData()"> -->
             
           </div>
