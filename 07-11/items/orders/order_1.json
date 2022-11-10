@@ -1,0 +1,37 @@
+{
+    "id": "order_id_1",
+    "version": "1.0.0",
+    "ordernr": 1224,
+    "ordered_at": 1667814271,
+    "ordered_by": "user_id_1",
+    "items_ordered": [
+        {
+            "id": "item_id_1",
+            "version": "1.0.0",
+            "item_name": "item_1",
+            "quantity": 1,
+            "ordernr": 1224,
+            "ordered_at": 1667814271,
+            "price": 67
+        },
+        {
+            "id": "item_id_2",
+            "version": "1.0.0",
+            "item_name": "item_2",
+            "quantity": 1,
+            "ordernr": 1224,
+            "ordered_at": 1667814271,
+            "price": 37
+        },
+        {
+            "id": "item_id_3",
+            "version": "1.0.0",
+            "item_name": "item_3",
+            "quantity": 1,
+            "ordernr": 1224,
+            "ordered_at": 1667814271,
+            "price": 147
+        }
+    ],
+    "order_total_price": 251
+}

@@ -20,7 +20,7 @@ class DB {
     }
     
     public function viewData() {
-        $query = "SELeCT name FROM names";
+        $query = "SELECT name FROM names";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);

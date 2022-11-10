@@ -1,0 +1,34 @@
+{
+    "id": "ObjectId_f",
+    "name": "Dad",
+    "lastName": "dadLast",
+    "email": "dad@m",
+    "partner": {
+        "id": "ObjectId_m",
+        "name": "mom",
+        "lastName": "momLast",
+        "email": "mom@m",
+        "kids": {
+            "1": "ObjectId_a",
+            "2": "ObjectId_b",
+            "3": "ObjectId_c"
+        },
+        "phones": [
+            {
+                "type": "mobile",
+                "phone": "555"
+            }
+        ]
+    },
+    "kids": {
+        "1": "ObjectId_a",
+        "2": "ObjectId_b",
+        "3": "ObjectId_c"
+    },
+    "phones": [
+        {
+            "type": "mobile",
+            "phone": "666"
+        }
+    ]
+}

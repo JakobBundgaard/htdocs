@@ -1,0 +1,31 @@
+{
+    "id": "ObjectId_b",
+    "name": "sB",
+    "lastName": "BB",
+    "email": "a@a",
+    "password": "passA",
+    "phones": [],
+    "father": {
+        "id": "father",
+        "name": "Dad",
+        "lastName": "DaName",
+        "email": "dad@m",
+        "phones": []
+    },
+    "mother": {
+        "id": "mother",
+        "name": "mom",
+        "lastName": "MoName",
+        "email": "mom@m",
+        "phones": [
+            {
+                "type": "mobile",
+                "phone": "555"
+            }
+        ]
+    },
+    "siblings": {
+        "sibling_1": "ObjectId_a",
+        "sibling_2": "ObjectId_c"
+    }
+}

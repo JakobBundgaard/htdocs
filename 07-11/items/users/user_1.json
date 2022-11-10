@@ -1,0 +1,133 @@
+{
+    "id": "user_id_1",
+    "version": "1.0.0",
+    "user": "DGI-byen",
+    "email": "dgi@mail.dk",
+    "delivery_address": "address_1",
+    "orders": [
+        {
+            "id": "order_id_3",
+            "version": "1.0.0",
+            "ordernr": 1228,
+            "ordered_at": 1667814271,
+            "ordered_by": "user_id_1",
+            "items_ordered": [
+                {
+                    "id": "item_id_1",
+                    "version": "1.0.0",
+                    "item_name": "item_1",
+                    "quantity": 1,
+                    "ordernr": 1228,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 67
+                },
+                {
+                    "id": "item_id_2",
+                    "version": "1.0.0",
+                    "item_name": "item_2",
+                    "quantity": 1,
+                    "ordernr": 1228,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 37
+                },
+                {
+                    "id": "item_id_3",
+                    "version": "1.0.0",
+                    "item_name": "item_3",
+                    "quantity": 1,
+                    "ordernr": 1228,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 147
+                }
+            ],
+            "order_total_price": 251,
+            "payed_at": 1667814271
+        },
+        {
+            "id": "order_id_4",
+            "version": "1.0.0",
+            "ordernr": 1229,
+            "ordered_at": 1667814371,
+            "ordered_by": "user_id_1",
+            "items_ordered": [
+                {
+                    "id": "item_id_4",
+                    "version": "1.0.0",
+                    "item_name": "item_4",
+                    "quantity": 1,
+                    "ordernr": 1229,
+                    "ordered_at": 1667814341,
+                    "ordered_by": "user_id_1",
+                    "price": 247
+                },
+                {
+                    "id": "item_id_5",
+                    "version": "1.0.0",
+                    "item_name": "item_5",
+                    "quantity": 4,
+                    "ordernr": 1229,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 677
+                },
+                {
+                    "id": "item_id_6",
+                    "version": "1.0.0",
+                    "item_name": "item_6",
+                    "quantity": 1,
+                    "ordernr": 1229,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 97
+                }
+            ],
+            "order_total_price": 1021,
+            "payed_at": 1667814271
+        },
+        {
+            "id": "order_id_5",
+            "version": "1.0.0",
+            "ordernr": 1229,
+            "ordered_at": 1667814371,
+            "ordered_by": "user_id_1",
+            "items_ordered": [
+                {
+                    "id": "item_id_4",
+                    "version": "1.0.0",
+                    "item_name": "item_4",
+                    "quantity": 1,
+                    "ordernr": 1229,
+                    "ordered_at": 1667814341,
+                    "ordered_by": "user_id_1",
+                    "price": 247
+                },
+                {
+                    "id": "item_id_5",
+                    "version": "1.0.0",
+                    "item_name": "item_5",
+                    "quantity": 1,
+                    "ordernr": 1229,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 677
+                },
+                {
+                    "id": "item_id_6",
+                    "version": "1.0.0",
+                    "item_name": "item_6",
+                    "quantity": 1,
+                    "ordernr": 1229,
+                    "ordered_at": 1667814271,
+                    "ordered_by": "user_id_1",
+                    "price": 97
+                }
+            ],
+            "order_total_price": 1021,
+            "payed_at": 1667814271
+        }
+    ],
+    "total_price_on_oders_to_date": 1272
+}

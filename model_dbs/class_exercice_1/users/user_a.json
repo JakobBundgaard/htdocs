@@ -1,0 +1,19 @@
+{
+    "id": "IdA",
+    "name": "A",
+    "email": "a@a",
+    "items_purchased": [
+         {
+            "id": "randomId",
+            "name": "Item a",
+            "original_price": "10",
+            "purchase_price": "8"
+         },
+         {
+            "id": "randomId",
+            "name": "Item c",
+            "original_price": "30",
+            "purchase_price": "30"
+         }
+    ]
+}

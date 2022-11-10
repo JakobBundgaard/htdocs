@@ -1,0 +1,12 @@
+{
+    "id": "random_teacher_id",
+    "name": "Santiago",
+    "classes": [
+        {
+            "id": "random_class_id",
+            "name": "web_dev",
+            "can_be_censor": 1
+        }
+    ]
+
+}

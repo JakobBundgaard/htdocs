@@ -1,0 +1,8 @@
+{
+    "id": "user_id_2",
+    "version": "1.0.0",
+    "email": "q@a",
+    "delivery_address": "address_2",
+    "orders": [],
+    "total_price_on_oders": ""
+}

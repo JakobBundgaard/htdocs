@@ -1,14 +1,47 @@
-<?php 
+<?php
 
-class Album {
+class Album
+{
     private $db;
 
-    public function __construct() {
+    public function __construct()
+    {
         // Instantiating db
         $this->db = new Database;
     }
 
-    public function getAlbumsByUserId($user_id) {
+    public function viewData()
+    {
+        $sql = "SELECT * FROM albums";
+        $stmt = $this->db->query($sql);
+        $result = $this->db->resultSet();
+
+        return $result;
+    }
+
+
+    public function searchDataArtist($user_id, $str) {
+        $sql = "SELECT *,
+                        albums.id as albumId,
+                        users.id as userId
+                        FROM albums
+                        INNER JOIN users
+                        ON albums.user_id = users.id 
+                        LEFT JOIN images
+                        ON albums.image_id = images.id 
+                        WHERE albums.user_id = $user_id
+                        AND (albums.artist LIKE '%" . $str . "%' OR albums.title LIKE '%" . $str . "%' OR albums.genre LIKE '%" . $str . "%' OR albums.released LIKE '%" . $str . "%' )
+                        ORDER BY artist ASC                            
+                        ";
+        $this->db->query($sql);
+        $results = $this->db->resultSet();
+
+        return $results;
+    }
+
+
+    public function getAlbumsByUserId($user_id)
+    {
         $sql = "SELECT *,
                         albums.id as albumId,
                         users.id as userId
@@ -27,8 +60,9 @@ class Album {
         return $results;
     }
 
-    public function addAlbum($data) {
-        $this->db->query('INSERT INTO albums (artist, title, user_id, released, genre, tracks, image_id) VALUES(:artist, :title, :user_id, :released, :genre, :tracks, :image_id)');
+    public function addAlbum($data)
+    {
+        $this->db->query('INSERT INTO albums (artist, title, user_id, released, genre, tracks) VALUES(:artist, :title, :user_id, :released, :genre, :tracks)');
         // Bind values
         $this->db->bind(':artist', $data['artist']);
         $this->db->bind(':title', $data['title']);
@@ -36,17 +70,17 @@ class Album {
         $this->db->bind(':released', $data['released']);
         $this->db->bind(':genre', $data['genre']);
         $this->db->bind(':tracks', $data['tracks']);
-        $this->db->bind(':image_id', $data['image_id']);
 
         // Execute
-        if($this->db->execute()){
+        if ($this->db->execute()) {
             return true;
         } else {
             return false;
         }
     }
 
-    public function updateAlbum($data) {
+    public function updateAlbum($data)
+    {
         $this->db->query('UPDATE albums SET artist = :artist, title = :title, released = :released, genre = :genre, tracks = :tracks, image_id = :image_id WHERE id = :id');
         // Bind values
         $this->db->bind(':id', $data['id']);
@@ -58,28 +92,30 @@ class Album {
         $this->db->bind(':image_id', $data['image_id']);
 
         // Execute
-        if($this->db->execute()){
+        if ($this->db->execute()) {
             return true;
         } else {
             return false;
         }
     }
 
-    public function addImage($data) {
+    public function addImage($data)
+    {
         $this->db->query("INSERT INTO images (name, image) VALUES(:name, :image)");
         // Bind values
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':image', $data['image']);
 
         // Execute
-        if($this->db->execute()){
+        if ($this->db->execute()) {
             return $this->db->lastInsertId();
         } else {
             return false;
         }
     }
 
-    public function getAlbumById($id) {
+    public function getAlbumById($id)
+    {
         $this->db->query('SELECT * FROM albums WHERE id = :id');
         $this->db->bind(':id', $id);
 
@@ -87,16 +123,15 @@ class Album {
 
         return $row;
     }
-     
-    public function deleteAlbum($id) {
-        // $this->db->query('UPDATE albums SET artist = :artist, title = :title, released = :released, genre = :genre, tracks = :tracks, image = :image WHERE id = :id');
+
+    public function deleteAlbum($id)
+    {
         $this->db->query('DELETE FROM albums WHERE id = :id');
         // Bind values
         $this->db->bind(':id', $id);
-        
 
         // Execute
-        if($this->db->execute()){
+        if ($this->db->execute()) {
             return true;
         } else {
             return false;

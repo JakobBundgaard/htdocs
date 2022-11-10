@@ -1,0 +1,23 @@
+{
+    "id": "random_exam_id",
+    "name": "web_dev",
+    "dates": [
+        "3/10",
+        "4/10",
+        "5/10"
+    ],
+    "teachers": [
+        {
+            "id": "random_teacher_id",
+            "name": "Santiago",
+            "last_name": "Donoso",
+            "email": "santiago@mail.dk"
+        },
+        {
+            "id": "random_teacher_id",
+            "name": "Loretta",
+            "last_name": "Stone",
+            "email": "loretta@mail.dk"
+        }
+    ]
+}

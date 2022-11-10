@@ -1,0 +1,35 @@
+{
+    "id": "random_!",
+    "names": ["A", "B"],
+    "prefered_name": "A",
+    "email": "@a",
+    "password": "passA",
+    "phone_numbers": [
+        "121",
+        "234"
+    ],
+    "hobbies": [
+        "Bouldering",
+         "Cooking",
+         "Guitar"
+    ],
+    "friends": [
+            {
+            "id": "random2",
+            "prefered_name": "C",
+            "email": "@c",
+            "phone_numbers": ["11b"]  ,
+            "hobbies": [
+                "Bouldering",
+                 "Cooking",
+                 "Guitar"
+            ]      
+        }
+    ],
+    "followers": [
+       "random1000","random10000000"
+    ],
+    "new_tweets": [
+        {"100": "new tweets only"}
+    ]
+}

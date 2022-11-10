@@ -1,0 +1,21 @@
+{
+    "id": "user1",
+    "version": "1.0.0",
+    "email": "q@a",
+    "friends": [
+        {
+            "id": "friend_5",
+            "version": "1.0.0",
+            "name": "name_5",
+            "created_at": 1667814395,
+            "user_id": "user1"
+        },
+        {
+            "id": "friend_6",
+            "version": "1.0.0",
+            "name": "name_6",
+            "created_at": 1667814287,
+            "user_id": "user1"
+        }
+    ]
+}

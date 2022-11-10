@@ -1,0 +1,16 @@
+{
+    "id": "random2",
+    "names": ["C"],
+    "prefered_name": "",
+    "email": "@c",
+    "password": "passB",
+    "phone_numbers": ["11b"],
+    "hobbies": [
+        "Bouldering",
+         "Cooking",
+         "Guitar"
+    ],
+    "friends": [
+        "random1"
+    ] 
+}
